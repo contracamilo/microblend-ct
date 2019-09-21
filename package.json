@@ -9,10 +9,7 @@
     "build": "webpack --config webpack.prod.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint --ext .jsx,.js src",
-    "pre-commit": "npm run lint",
-    "pre-push": "npm test",
-    "post-merge": "npm install",
-    "post-rewrite": "npm install"
+    "pre-commit": "yarn lint"
   },
   "author": "Globant",
   "license": "MIT",
