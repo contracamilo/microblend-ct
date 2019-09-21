@@ -1,44 +1,64 @@
 {
-	"name": "microblend-sodimac",
-	"version": "0.1.0",
-	"description": "arch-proposal",
-	"main": "index.js",
-	"scripts": {
-		"watch": "webpack --watch",
-		"develop": "webpack-dev-server --config ./webpack.dev.js",
-		"build": "webpack --config webpack.prod.js",
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"author": "Camilo Rivera Quintero <camilo.riveraq@gmail.com> (https://contracamilo.github.io/camiloriveracv/)",
-	"license": "MIT",
-	"dependencies": {
-		"@babel/runtime": "^7.6.0",
-		"file-loader": "^4.2.0",
-		"node-sass": "4.12.0",
-		"react": "16.9.0",
-		"react-dom": "16.9.0",
-		"react-redux": "7.1.1",
-		"redux": "4.0.4",
-		"url-loader": "^2.1.0"
-	},
-	"devDependencies": {
-		"@babel/core": "^7.6.0",
-		"@babel/plugin-proposal-class-properties": "^7.5.5",
-		"@babel/plugin-syntax-dynamic-import": "^7.2.0",
-		"@babel/plugin-transform-runtime": "^7.6.0",
-		"@babel/preset-env": "^7.6.0",
-		"@babel/preset-react": "^7.0.0",
-		"babel-loader": "^8.0.6",
-		"clean-webpack-plugin": "^3.0.0",
-		"css-loader": "^3.2.0",
-		"html-webpack-plugin": "^3.2.0",
-		"html-webpack-template": "^6.2.0",
-		"mini-css-extract-plugin": "^0.8.0",
-		"sass-loader": "^8.0.0",
-		"style-loader": "^1.0.0",
-		"webpack": "^4.40.2",
-		"webpack-cli": "^3.3.9",
-		"webpack-dev-server": "^3.8.1",
-		"webpack-merge": "^4.2.2"
-	}
+  "name": "microblend-sodimac",
+  "version": "0.1.0",
+  "description": "arch-proposal",
+  "main": "index.js",
+  "scripts": {
+    "watch": "webpack --watch",
+    "develop": "webpack-dev-server --config ./webpack.dev.js",
+    "build": "webpack --config webpack.prod.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Globant",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/runtime": "^7.6.0",
+    "file-loader": "^4.2.0",
+    "node-sass": "4.12.0",
+    "react": "16.9.0",
+    "react-dom": "16.9.0",
+    "react-redux": "7.1.1",
+    "redux": "4.0.4",
+    "url-loader": "^2.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.2.0",
+    "eslint": "^6.4.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "html-webpack-plugin": "^3.2.0",
+    "html-webpack-template": "^6.2.0",
+    "husky": "^3.0.5",
+    "lint-staged": "^9.2.5",
+    "mini-css-extract-plugin": "^0.8.0",
+    "prettier": "^1.18.2",
+    "pretty-quick": "^1.11.1",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.40.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.1",
+    "webpack-merge": "^4.2.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx}": [
+      "eslint",
+      "pretty-quick — staged",
+      "git add"
+    ]
+  }
 }
