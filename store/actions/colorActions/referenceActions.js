@@ -1,13 +1,15 @@
 import axios from 'axios';
 import { GET_COLORS, LOADING, ERROR } from '../../types/colorTypes';
+import { ServiceUrl, CompanyKey } from '../../api';
 
-export const getColors = () => async (dispatch) => {
+
+export const getColors = (color) => async (dispatch) => {
   dispatch({
     type: LOADING
   });
 
   try {
-    const response = await axios.get('https://jsonplaceholder.typicode.com/users');
+    const response = await axios.get(`${ServiceUrl}/service/color/bestmatches/${color}/?X-COMPANY-KEY=${CompanyKey}`);
     dispatch({
       type: GET_COLORS,
       payload: response.data

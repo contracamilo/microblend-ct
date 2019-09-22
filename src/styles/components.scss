@@ -1,1 +1,8 @@
 @import '../components/App/app';
+
+// atoms
+@import '../components/atoms/ColorBox/colorbox';
+@import '../components/atoms/Loader/loader';
+
+//molecules
+@import '../components/molecules/ColorGrid/colorGrid';

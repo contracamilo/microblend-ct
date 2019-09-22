@@ -1,8 +1,8 @@
 import React from 'react';
 
-const ColorGrid = () => (
-  <div>
-      hola
+const ColorGrid = ({ children }) => (
+  <div className="color-grid">
+    {children}
   </div>
 );
 

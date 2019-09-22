@@ -12,9 +12,9 @@ integration test to actual HC page
 -   `yarn install` to install all the dependencies
 -   `yarn develop` open the dev environment in the port 8080 
 -   `yarn build` package for production
--   `yarn Lint` Run the code linter
--   `yarn Storybook` opens storybook playground in the post 6006
--   `Yarn Test` for unit testing
+-   `yarn lint` Run the code linter
+-   `yarn storybook` opens storybook playground in the post 6006
+-   `Yarn test` for unit testing
 
 ## Licencia
 
